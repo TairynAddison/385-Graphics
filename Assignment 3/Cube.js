@@ -3,17 +3,30 @@ const DefaultNumSides = 8;
 function Cube(gl) {
 
     var program = initShaders(gl, "Cube-vertex-shader", "Cube-fragment-shader");
+    var d = 0.25 // for scale, quick
+    var positions = [ -d,-d,-d, d,-d,-d, d,d,-d, -d,d,-d, -d,-d,d, d,-d,d, d,d,d, -d,d,d ];
 
-    var positions = [
+    /*var positions = [
+        0,0,0, // vertex 0
+		-1,0,0, // vertex 1
+		1,0,0, // vertex 2
+		1,1,0, // vertex 3
+		1,1,1, // vertex 4
+		1,0,1, // vertex 5
+		0,1,1, // vertex 6
+		0,0,1]; */
+    
+    /*var positions = [
+        -.5,0, 0,
+        0, .5 ,0,
         0,0,0,
-        1,0,0,
-        1,1,0,
-        0,1,0,
-        0,0,1,
-        1,0,1,
-        1,1,1,
-        0,1,1
-    ];
+        0,0,0,
+        //0,0,-.5,
+        //-.5,0,0,
+        //0, -.5, 0,
+        //0, 0, -.5,
+        
+    ];*/
     
     var indices = [
         0,1,2,
@@ -68,6 +81,8 @@ function Cube(gl) {
     }
 };
 
+
+//////////////////////////////
 //Disregard
 function Cube_firstAttempt( gl) {
 

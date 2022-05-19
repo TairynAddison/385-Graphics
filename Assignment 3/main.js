@@ -20,7 +20,7 @@ function render(){
         gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
         
         angle += .75;
-        cube.MV = rotate(angle, [2, 1 ,1]);
+        cube.MV = rotate(angle, [2, -1 ,1]);
         //numbers just to play around
 
         
